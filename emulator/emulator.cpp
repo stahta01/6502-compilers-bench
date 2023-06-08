@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
 			std::cerr << "cannot read the program from " << program_path << '\n'; // Can happen if the file is too short
 		}
 	}
-	::bzero(ram.data(), ram.size());
+	::memset(ram.data(), '\0', ram.size());
 
 	// Run the program
 	mos6502 emulator;
